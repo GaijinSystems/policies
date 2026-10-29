@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spellsign privacy policy</title>
+<style>
+body { background: #120c24; color: #ede6d6; font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem;
+       line-height: 1.6; margin: 0; padding: 2rem 1.25rem 4rem; }
+main { max-width: 42rem; margin: 0 auto; }
+h1, h2, h3 { font-family: Cinzel, 'Trajan Pro', Georgia, serif; color: #e9c46a; letter-spacing: 0.06em; }
+h1 { font-size: 1.9rem; } h2 { font-size: 1.3rem; margin-top: 2.2rem; } h3 { font-size: 1.1rem; }
+a { color: #c9b6ff; } code { color: #e9c46a; }
+.lede { color: #a89fb8; } footer { margin-top: 3rem; color: #a89fb8; font-size: 0.95rem; }
+</style>
+</head>
+<body><main>
+<h1>Spellsign privacy policy</h1>
+<p>Last updated: 28 October 2026.</p>
+<p>Spellsign is a game for Android made by Gaijin Systems. This policy says what the game keeps, what it sends and where,
+and what Gaijin Systems receives (nothing). It is published at https://policies.gaijin.systems/spellsign.html, and
+the same text is in the app, under Options, About Spellsign, Privacy policy.</p>
+<h2>In short</h2>
+<ul>
+<li>Gaijin Systems collects nothing about you. Spellsign has no accounts, no advertising, no analytics and no crash
+  reporting of its own, and it never contacts Gaijin Systems.</li>
+<li>What the game keeps stays on your phone (and in your phone's backup, if you use one).</li>
+<li><strong>Nearby duels</strong> connect phones directly over Bluetooth. Your wizard's name, pronouns and moves go to the other
+  phones in the duel; while you host one, the start of your wizard's name is visible to Bluetooth devices nearby.</li>
+<li>The <strong>language-model opponent</strong> is off unless you turn it on. If you do, the game sends a computer wizard's view of
+  the duel, and the rules, to the one service you choose: a server of your own, or a provider such as Anthropic or
+  OpenAI, with your own key. That service handles it under its own terms, not Gaijin Systems.</li>
+</ul>
+<h2>What is kept on your phone</h2>
+<p>Spellsign keeps these in its own storage on your phone, where other apps can't read them:</p>
+<ul>
+<li><strong>Your preferences:</strong> your wizard's name and pronouns, the settings in Options, and how you last set up a duel.</li>
+<li><strong>Your record:</strong> your rating and title, wins and losses, your rivals, finest moments and hall of shame, and what the
+  computer wizards have learnt of your habits. Options, Reset record forgets all of it.</li>
+<li><strong>A duel under way:</strong> how it was set up and every gesture and decision so far, so that it can be taken up again.</li>
+<li><strong>For nearby duels:</strong> a signing key, made on your phone and kept in the Android Keystore, which never leaves the
+  phone (only its public half is sent; see below); and, during a nearby duel, what is needed to finish it or rejoin it:
+  moves you have committed to but not yet revealed, and the duel's details, its host's name and yours.</li>
+<li><strong>A small file for the game's secret</strong>, which may hold a copy of some of your settings, and is left out of backups.</li>
+<li><strong>For the language-model opponent,</strong> if you set it up: which service it uses (the provider, or your server's
+  address), the model's name and, if you give one, your API key or token for that service. It is kept encrypted, under
+  a separate key held in the Android Keystore, and left out of backups.</li>
+</ul>
+<p>If you copy or save a duel's chronicle (its narration), it goes to the clipboard, or to the file and place you choose.</p>
+<p>If your phone's backup is turned on, Android may include Spellsign's preferences, record, saved duel and the details of
+a nearby duel under way in your backup to your Google account, and may move them to a new phone. That backup is
+between you and Google; Gaijin Systems can't see it. The small file for the game's secret, the signing key and the
+language-model key are not backed up.</p>
+<p>Uninstalling Spellsign, or clearing its storage in Android's settings, deletes everything it keeps on the phone. A
+backup in your Google account is managed from your Google account.</p>
+<h2>Nearby duels</h2>
+<p>Nearby duels connect phones in the same room directly over Bluetooth Low Energy. No server, internet connection or
+Google Play service is involved, and nothing is sent to Gaijin Systems.</p>
+<ul>
+<li>To find and connect to other phones, Spellsign asks for Android's <strong>Nearby devices</strong> permission. It is used only for
+  nearby duels, and never to find out where you are. Spellsign does not ask for your location.</li>
+<li>While you host a duel, your phone advertises it over Bluetooth, so that phones nearby can find it: the start of your
+  wizard's name, how many wizards have joined, and what the game needs to connect. Any Bluetooth device nearby can see
+  this while you are hosting.</li>
+<li>During a duel, the phones in it receive your wizard's name and pronouns, the public half of your signing key, and
+  your moves: your gestures and answers, sent first sealed and then revealed. The host's phone passes messages between
+  the others. Each message is signed, so that nobody can forge another wizard's moves, but it is not encrypted; it
+  holds nothing besides the game.</li>
+<li>The other players' phones keep what they need of the duel while it lasts. Afterwards they may keep you in their
+  record as a rival, under your wizard's name and the public half of your signing key, as yours keeps them. That is on
+  their phones, and in their hands.</li>
+</ul>
+<h2>The language-model opponent</h2>
+<p>Spellsign can let a computer wizard be played by a language model, on a service you choose:</p>
+<ul>
+<li>a server of your own, such as Ollama or LM Studio on your computer; or</li>
+<li>a cloud provider, with an API key from your own account there: Anthropic, OpenAI, Google Gemini, OpenRouter, Groq,
+  Mistral, or another service that works the same way as OpenAI's.</li>
+</ul>
+<p>This feature is off unless you turn it on in Options, and nothing is sent until you have turned it on and chosen a
+service.</p>
+<p>When it is on, Spellsign sends to the service you chose, and to no other:</p>
+<ul>
+<li>the duel as that computer wizard sees it: the wizards' health, the spells and monsters it knows of, the gestures it
+  has seen, the questions it must answer, and the names the players chose;</li>
+<li>the rules text the model needs to play;</li>
+<li>your API key or token, if you gave one, which the service needs to know the request is yours;</li>
+<li>when you test the connection in Options, a short test message.</li>
+</ul>
+<p>It sends no account, email address or device identifier of yours, and nothing from your record of earlier duels. Like
+any server your phone connects to, the service sees your internet (IP) address. The
+feature is used only in duels on your own phone against computer wizards, never in a nearby duel, so other players'
+names and moves are never sent to it.</p>
+<p><strong>A cloud provider is a company separate from Gaijin Systems.</strong> What you send to it is handled under that provider's
+own terms and privacy policy, which you agreed to when you got your key: read them to see what it keeps, for how
+long, and whether it may use what you send. Its charges for using the model go to your account with it, and a long
+duel can make many requests. Gaijin Systems has no agreement with any of these providers and receives nothing from
+them or from you through this feature. On a server of your own, everything stays with you.</p>
+<p>For this feature, Spellsign uses Android's <strong>internet</strong> permission and, to reach a server on your own network, its
+<strong>local network</strong> permission (on Android versions that have it), which it asks for only in Options, for a server on
+your own network. They are used for nothing else.</p>
+<h2>What Gaijin Systems receives</h2>
+<p>Nothing from the app. Spellsign has no servers, and it sends nothing to Gaijin Systems or to anyone working with it.
+It has no advertising, analytics, tracking, or third-party code that collects data.</p>
+<p>Google Play is a separate matter. Google handles installing and buying the game under Google's own privacy policy,
+and, as for every app on Google Play, gives Gaijin Systems sales reports with limited details of each purchase,
+which we use only for accounts and tax. If you have allowed your phone to share usage and diagnostics with Google,
+Google may also show developers crash reports and performance statistics that Android gathers; these come from
+Android and Google Play, not from Spellsign.</p>
+<h2>Children</h2>
+<p>Gaijin Systems collects no personal data from anyone, children included. A child who plays nearby duels shares their
+wizard's name and moves with the phones in the duel, as above. The language-model opponent sends nothing unless it
+is turned on and given a service to use. It is meant to be set up by an adult: a cloud provider's key belongs to an
+account with that provider, which may charge for its use and has its own age rules.</p>
+<h2>Changes</h2>
+<p>If Spellsign starts to keep or send anything new, this policy will say so before the version of the app that does,
+both in the app and at the address above, with a new date at the top.</p>
+<h2>Contact</h2>
+<p>Questions about this policy, or about Spellsign and your data: spellsign@gaijin.systems.</p>
+<footer>© 2026 Gaijin Systems.</footer>
+</main></body>
+</html>
